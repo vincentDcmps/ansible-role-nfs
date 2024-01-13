@@ -1,0 +1,7 @@
+- name: Template consul service
+  ansible.builtin.template:
+    src: consul.d/nfs.hcl.j2
+    dest: /etc/consul.d/nfs.hcl
+    owner: consul
+    mode: "0644"
+  notify: Reload consul configuration on Linux

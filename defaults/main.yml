@@ -1,4 +1,8 @@
 ---
+nfs_consul_service: false
+nfs_consul_service_name: nfs
+nfs_consul_tag:
+
 nfs_exports: []
 
 nfs_rpcbind_state: started

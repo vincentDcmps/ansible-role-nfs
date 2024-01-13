@@ -1,0 +1,16 @@
+service {
+  name = "{{ nfs_consul_service_name }}"
+  id   = "{{ nfs_consul_service_name }}"
+  port = 2049
+  tags = ["{{nfs_consul_tag}}"]
+  check
+  {
+     id =  "check-{{ nfs_consul_service_name }}",
+     name = "{{ nfs_consul_service_name }} status check",
+     service_id = "{{ nfs_consul_service_name }}",
+     tcp  = "localhost:2049",
+     interval = "5s",
+     timeout = "5s"
+  }
+}
+
