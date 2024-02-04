@@ -2,7 +2,7 @@
 - name: reload nfs
   command: 'exportfs -ra'
 
-- name: reload consul configuration on Linux
+- name: Reload consul configuration on Linux
   command: "consul reload"
   listen: "reload consul configuration"
 
