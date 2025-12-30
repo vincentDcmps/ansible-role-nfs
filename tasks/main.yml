@@ -29,7 +29,7 @@
 
 - name: Ensure nfs is running.
   service: "name={{ nfs_server_daemon }} state=started enabled=yes"
-  when: nfs_exports|length
+  when: nfs_exports|length  > 0
 
 - name: Import Consul service task
   ansible.builtin.import_tasks: consul.yml
